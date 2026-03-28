@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ── Japanese Pages ── -->
+  <url>
+    <loc>https://aoki-beautyclinic.com/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aoki-beautyclinic.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoki-beautyclinic.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoki-beautyclinic.com/zh/"/>
+    <lastmod>2025-01-01</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/ja/menu.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aoki-beautyclinic.com/ja/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoki-beautyclinic.com/en/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoki-beautyclinic.com/zh/menu.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/ja/menu-eye.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aoki-beautyclinic.com/ja/menu-eye.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoki-beautyclinic.com/en/menu-eye.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoki-beautyclinic.com/zh/menu-eye.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/ja/menu-nose.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aoki-beautyclinic.com/ja/menu-nose.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoki-beautyclinic.com/en/menu-nose.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoki-beautyclinic.com/zh/menu-nose.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/ja/menu-face.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aoki-beautyclinic.com/ja/menu-face.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoki-beautyclinic.com/en/menu-face.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoki-beautyclinic.com/zh/menu-face.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/ja/menu-skin.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aoki-beautyclinic.com/ja/menu-skin.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoki-beautyclinic.com/en/menu-skin.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoki-beautyclinic.com/zh/menu-skin.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/ja/menu-body.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aoki-beautyclinic.com/ja/menu-body.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoki-beautyclinic.com/en/menu-body.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoki-beautyclinic.com/zh/menu-body.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/ja/menu-hair.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aoki-beautyclinic.com/ja/menu-hair.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoki-beautyclinic.com/en/menu-hair.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoki-beautyclinic.com/zh/menu-hair.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/ja/menu-inject.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aoki-beautyclinic.com/ja/menu-inject.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoki-beautyclinic.com/en/menu-inject.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoki-beautyclinic.com/zh/menu-inject.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/ja/cases.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aoki-beautyclinic.com/ja/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoki-beautyclinic.com/en/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoki-beautyclinic.com/zh/cases.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/ja/doctors.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aoki-beautyclinic.com/ja/doctors.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoki-beautyclinic.com/en/doctors.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoki-beautyclinic.com/zh/doctors.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/ja/clinic.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aoki-beautyclinic.com/ja/clinic.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoki-beautyclinic.com/en/clinic.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoki-beautyclinic.com/zh/clinic.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── English Pages ── -->
+  <url>
+    <loc>https://aoki-beautyclinic.com/en/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/en/menu.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/en/menu-eye.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/en/menu-nose.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/en/menu-face.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/en/menu-skin.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/en/menu-body.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/en/menu-hair.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/en/menu-inject.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/en/cases.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/en/doctors.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/en/clinic.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ── Chinese Pages ── -->
+  <url>
+    <loc>https://aoki-beautyclinic.com/zh/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/zh/menu.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/zh/menu-eye.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/zh/menu-nose.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/zh/menu-face.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/zh/menu-skin.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/zh/menu-body.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/zh/menu-hair.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/zh/menu-inject.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/zh/cases.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/zh/doctors.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aoki-beautyclinic.com/zh/clinic.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
