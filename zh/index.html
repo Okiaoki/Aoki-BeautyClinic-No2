@@ -373,163 +373,147 @@
         </div>
 
         <!-- 横向滚动案例预览 -->
-        <div class="cases-preview__scroll" id="cases-scroll">
-          <!-- Card 1: 埋线双眼皮 -->
-          <article class="case-preview-card">
-            <div class="case-preview-card__images">
-              <div class="case-preview-card__img">
-                <picture>
-                <source srcset="../assets/img/case-01-before.webp" type="image/webp">
-                <img src="../assets/img/case-01-before.jpg" alt="症例01 治疗前" loading="lazy" decoding="async">
-              </picture>
+        <div class="cases-preview__scroll-wrapper">
+          <button class="cases-preview__nav cases-preview__nav--prev" aria-label="上一个案例">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="cases-preview__scroll" id="cases-scroll">
+            <!-- Card 1: eye -->
+            <a href="cases.html" class="case-preview-card" data-case-toggle>
+              <div class="case-preview-card__images">
+                <picture class="case-preview-card__pic case-preview-card__pic--before">
+                  <source srcset="../assets/img/case-01-before.webp" type="image/webp">
+                  <img src="../assets/img/case-01-before.jpg" alt="案例1 治疗前" loading="lazy" decoding="async">
+                </picture>
+                <picture class="case-preview-card__pic case-preview-card__pic--after">
+                  <source srcset="../assets/img/case-01-after.webp" type="image/webp">
+                  <img src="../assets/img/case-01-after.jpg" alt="案例1 治疗后" loading="lazy" decoding="async">
+                </picture>
+                <span class="case-preview-card__label">术前</span>
               </div>
-              <span class="case-preview-card__arrow" aria-hidden="true">&#8594;</span>
-              <div class="case-preview-card__img">
-                <picture>
-                <source srcset="../assets/img/case-01-after.webp" type="image/webp">
-                <img src="../assets/img/case-01-after.jpg" alt="症例01 治疗后" loading="lazy" decoding="async">
-              </picture>
+              <div class="case-preview-card__info">
+                <div class="case-preview-card__tags">
+                  <span class="case-preview-card__tag">眼部</span>
+                  <span class="case-preview-card__tag">埋线法</span>
+                </div>
+                <h3 class="case-preview-card__title">自然双眼皮线条形成</h3>
+                <p class="case-preview-card__meta">20多岁女性</p>
               </div>
-            </div>
-            <div class="case-preview-card__info">
-              <div class="case-preview-card__tags">
-                <span class="case-preview-card__tag">眼部</span>
-                <span class="case-preview-card__tag">埋线法</span>
+            </a>
+            <!-- Card 2: nose -->
+            <a href="cases.html" class="case-preview-card" data-case-toggle>
+              <div class="case-preview-card__images">
+                <picture class="case-preview-card__pic case-preview-card__pic--before">
+                  <source srcset="../assets/img/case-07-before.webp" type="image/webp">
+                  <img src="../assets/img/case-07-before.jpg" alt="案例7 治疗前" loading="lazy" decoding="async">
+                </picture>
+                <picture class="case-preview-card__pic case-preview-card__pic--after">
+                  <source srcset="../assets/img/case-07-after.webp" type="image/webp">
+                  <img src="../assets/img/case-07-after.jpg" alt="案例7 治疗后" loading="lazy" decoding="async">
+                </picture>
+                <span class="case-preview-card__label">术前</span>
               </div>
-              <h3 class="case-preview-card__title">打造自然双眼皮线条</h3>
-              <p class="case-preview-card__meta">20多岁女性</p>
-            </div>
-          </article>
-          <!-- Card 2: 切开双眼皮 -->
-          <article class="case-preview-card">
-            <div class="case-preview-card__images">
-              <div class="case-preview-card__img">
-                <picture>
-                <source srcset="../assets/img/case-02-before.webp" type="image/webp">
-                <img src="../assets/img/case-02-before.jpg" alt="症例02 治疗前" loading="lazy" decoding="async">
-              </picture>
+              <div class="case-preview-card__info">
+                <div class="case-preview-card__tags">
+                  <span class="case-preview-card__tag">鼻部</span>
+                  <span class="case-preview-card__tag">隆鼻术</span>
+                </div>
+                <h3 class="case-preview-card__title">隆鼻术（假体）</h3>
+                <p class="case-preview-card__meta">20多岁女性</p>
               </div>
-              <span class="case-preview-card__arrow" aria-hidden="true">&#8594;</span>
-              <div class="case-preview-card__img">
-                <picture>
-                <source srcset="../assets/img/case-02-after.webp" type="image/webp">
-                <img src="../assets/img/case-02-after.jpg" alt="症例02 治疗后" loading="lazy" decoding="async">
-              </picture>
+            </a>
+            <!-- Card 3: face -->
+            <a href="cases.html" class="case-preview-card" data-case-toggle>
+              <div class="case-preview-card__images">
+                <picture class="case-preview-card__pic case-preview-card__pic--before">
+                  <source srcset="../assets/img/case-12-before.webp" type="image/webp">
+                  <img src="../assets/img/case-12-before.jpg" alt="案例12 治疗前" loading="lazy" decoding="async">
+                </picture>
+                <picture class="case-preview-card__pic case-preview-card__pic--after">
+                  <source srcset="../assets/img/case-12-after.webp" type="image/webp">
+                  <img src="../assets/img/case-12-after.jpg" alt="案例12 治疗后" loading="lazy" decoding="async">
+                </picture>
+                <span class="case-preview-card__label">术前</span>
               </div>
-            </div>
-            <div class="case-preview-card__info">
-              <div class="case-preview-card__tags">
-                <span class="case-preview-card__tag">眼部</span>
-                <span class="case-preview-card__tag">切开法</span>
+              <div class="case-preview-card__info">
+                <div class="case-preview-card__tags">
+                  <span class="case-preview-card__tag">轮廓</span>
+                  <span class="case-preview-card__tag">瘦脸针</span>
+                </div>
+                <h3 class="case-preview-card__title">瘦脸针</h3>
+                <p class="case-preview-card__meta">30多岁女性</p>
               </div>
-              <h3 class="case-preview-card__title">清晰的平行型双眼皮</h3>
-              <p class="case-preview-card__meta">30多岁女性</p>
-            </div>
-          </article>
-          <!-- Card 3: 隆鼻术 -->
-          <article class="case-preview-card">
-            <div class="case-preview-card__images">
-              <div class="case-preview-card__img">
-                <picture>
-                <source srcset="../assets/img/case-03-before.webp" type="image/webp">
-                <img src="../assets/img/case-03-before.jpg" alt="症例03 治疗前" loading="lazy" decoding="async">
-              </picture>
+            </a>
+            <!-- Card 4: skin -->
+            <a href="cases.html" class="case-preview-card" data-case-toggle>
+              <div class="case-preview-card__images">
+                <picture class="case-preview-card__pic case-preview-card__pic--before">
+                  <source srcset="../assets/img/case-16-before.webp" type="image/webp">
+                  <img src="../assets/img/case-16-before.jpg" alt="案例16 治疗前" loading="lazy" decoding="async">
+                </picture>
+                <picture class="case-preview-card__pic case-preview-card__pic--after">
+                  <source srcset="../assets/img/case-16-after.webp" type="image/webp">
+                  <img src="../assets/img/case-16-after.jpg" alt="案例16 治疗后" loading="lazy" decoding="async">
+                </picture>
+                <span class="case-preview-card__label">术前</span>
               </div>
-              <span class="case-preview-card__arrow" aria-hidden="true">&#8594;</span>
-              <div class="case-preview-card__img">
-                <picture>
-                <source srcset="../assets/img/case-03-after.webp" type="image/webp">
-                <img src="../assets/img/case-03-after.jpg" alt="症例03 治疗后" loading="lazy" decoding="async">
-              </picture>
+              <div class="case-preview-card__info">
+                <div class="case-preview-card__tags">
+                  <span class="case-preview-card__tag">肌肤</span>
+                  <span class="case-preview-card__tag">激光</span>
+                </div>
+                <h3 class="case-preview-card__title">激光嫩肤（黄褐斑治疗）</h3>
+                <p class="case-preview-card__meta">40多岁女性</p>
               </div>
-            </div>
-            <div class="case-preview-card__info">
-              <div class="case-preview-card__tags">
-                <span class="case-preview-card__tag">鼻部</span>
-                <span class="case-preview-card__tag">隆鼻术</span>
+            </a>
+            <!-- Card 5: injection -->
+            <a href="cases.html" class="case-preview-card" data-case-toggle>
+              <div class="case-preview-card__images">
+                <picture class="case-preview-card__pic case-preview-card__pic--before">
+                  <source srcset="../assets/img/case-21-before.webp" type="image/webp">
+                  <img src="../assets/img/case-21-before.jpg" alt="案例21 治疗前" loading="lazy" decoding="async">
+                </picture>
+                <picture class="case-preview-card__pic case-preview-card__pic--after">
+                  <source srcset="../assets/img/case-21-after.webp" type="image/webp">
+                  <img src="../assets/img/case-21-after.jpg" alt="案例21 治疗后" loading="lazy" decoding="async">
+                </picture>
+                <span class="case-preview-card__label">术前</span>
               </div>
-              <h3 class="case-preview-card__title">实现自然流畅的鼻梁线条</h3>
-              <p class="case-preview-card__meta">20多岁女性</p>
-            </div>
-          </article>
-          <!-- Card 4: 线雕提升 -->
-          <article class="case-preview-card">
-            <div class="case-preview-card__images">
-              <div class="case-preview-card__img">
-                <picture>
-                <source srcset="../assets/img/case-04-before.webp" type="image/webp">
-                <img src="../assets/img/case-04-before.jpg" alt="症例04 治疗前" loading="lazy" decoding="async">
-              </picture>
+              <div class="case-preview-card__info">
+                <div class="case-preview-card__tags">
+                  <span class="case-preview-card__tag">注射</span>
+                  <span class="case-preview-card__tag">玻尿酸</span>
+                </div>
+                <h3 class="case-preview-card__title">玻尿酸注射（卧蚕塑造）</h3>
+                <p class="case-preview-card__meta">20多岁女性</p>
               </div>
-              <span class="case-preview-card__arrow" aria-hidden="true">&#8594;</span>
-              <div class="case-preview-card__img">
-                <picture>
-                <source srcset="../assets/img/case-04-after.webp" type="image/webp">
-                <img src="../assets/img/case-04-after.jpg" alt="症例04 治疗后" loading="lazy" decoding="async">
-              </picture>
+            </a>
+            <!-- Card 6: hair -->
+            <a href="cases.html" class="case-preview-card" data-case-toggle>
+              <div class="case-preview-card__images">
+                <picture class="case-preview-card__pic case-preview-card__pic--before">
+                  <source srcset="../assets/img/case-26-before.webp" type="image/webp">
+                  <img src="../assets/img/case-26-before.jpg" alt="案例26 治疗前" loading="lazy" decoding="async">
+                </picture>
+                <picture class="case-preview-card__pic case-preview-card__pic--after">
+                  <source srcset="../assets/img/case-26-after.webp" type="image/webp">
+                  <img src="../assets/img/case-26-after.jpg" alt="案例26 治疗后" loading="lazy" decoding="async">
+                </picture>
+                <span class="case-preview-card__label">术前</span>
               </div>
-            </div>
-            <div class="case-preview-card__info">
-              <div class="case-preview-card__tags">
-                <span class="case-preview-card__tag">轮廓</span>
-                <span class="case-preview-card__tag">线雕提升</span>
+              <div class="case-preview-card__info">
+                <div class="case-preview-card__tags">
+                  <span class="case-preview-card__tag">脱毛</span>
+                  <span class="case-preview-card__tag">医疗激光</span>
+                </div>
+                <h3 class="case-preview-card__title">医疗激光脱毛（全身）</h3>
+                <p class="case-preview-card__meta">20多岁女性</p>
               </div>
-              <h3 class="case-preview-card__title">改善松弛，打造紧致轮廓</h3>
-              <p class="case-preview-card__meta">40多岁女性</p>
-            </div>
-          </article>
-          <!-- Card 5: 激光嫩肤 -->
-          <article class="case-preview-card">
-            <div class="case-preview-card__images">
-              <div class="case-preview-card__img">
-                <picture>
-                <source srcset="../assets/img/case-05-before.webp" type="image/webp">
-                <img src="../assets/img/case-05-before.jpg" alt="症例05 治疗前" loading="lazy" decoding="async">
-              </picture>
-              </div>
-              <span class="case-preview-card__arrow" aria-hidden="true">&#8594;</span>
-              <div class="case-preview-card__img">
-                <picture>
-                <source srcset="../assets/img/case-05-after.webp" type="image/webp">
-                <img src="../assets/img/case-05-after.jpg" alt="症例05 治疗后" loading="lazy" decoding="async">
-              </picture>
-              </div>
-            </div>
-            <div class="case-preview-card__info">
-              <div class="case-preview-card__tags">
-                <span class="case-preview-card__tag">皮肤</span>
-                <span class="case-preview-card__tag">激光</span>
-              </div>
-              <h3 class="case-preview-card__title">改善色斑与暗沉</h3>
-              <p class="case-preview-card__meta">30多岁女性</p>
-            </div>
-          </article>
-          <!-- Card 6: 玻尿酸注射 -->
-          <article class="case-preview-card">
-            <div class="case-preview-card__images">
-              <div class="case-preview-card__img">
-                <picture>
-                <source srcset="../assets/img/case-06-before.webp" type="image/webp">
-                <img src="../assets/img/case-06-before.jpg" alt="症例06 治疗前" loading="lazy" decoding="async">
-              </picture>
-              </div>
-              <span class="case-preview-card__arrow" aria-hidden="true">&#8594;</span>
-              <div class="case-preview-card__img">
-                <picture>
-                <source srcset="../assets/img/case-06-after.webp" type="image/webp">
-                <img src="../assets/img/case-06-after.jpg" alt="症例06 治疗后" loading="lazy" decoding="async">
-              </picture>
-              </div>
-            </div>
-            <div class="case-preview-card__info">
-              <div class="case-preview-card__tags">
-                <span class="case-preview-card__tag">注射</span>
-                <span class="case-preview-card__tag">玻尿酸</span>
-              </div>
-              <h3 class="case-preview-card__title">改善法令纹</h3>
-              <p class="case-preview-card__meta">40多岁女性</p>
-            </div>
-          </article>
+            </a>
+          </div>
+          <button class="cases-preview__nav cases-preview__nav--next" aria-label="下一个案例">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
         </div>
 
         <div class="cases-preview__more" data-reveal>

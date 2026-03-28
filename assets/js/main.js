@@ -253,6 +253,66 @@
   var casesScroll = document.getElementById('cases-scroll');
   if (casesScroll) enableDragScroll(casesScroll);
 
+  /* Cases Preview: Nav arrows (scroll by one card width) */
+  var prevBtn = document.querySelector('.cases-preview__nav--prev');
+  var nextBtn = document.querySelector('.cases-preview__nav--next');
+  if (casesScroll && prevBtn && nextBtn) {
+    var getCardWidth = function() {
+      var card = casesScroll.querySelector('.case-preview-card');
+      return card ? card.offsetWidth + 24 : 360;
+    };
+    prevBtn.addEventListener('click', function() {
+      casesScroll.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', function() {
+      casesScroll.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+    });
+  }
+
+  /* Cases Preview: SP tap toggle (Before/After) */
+  if (!window.matchMedia('(hover: hover)').matches) {
+    var isZh = document.documentElement.lang === 'zh' || document.documentElement.lang === 'zh-CN' || document.documentElement.lang === 'zh-Hans';
+    var labelBefore = isZh ? '术前' : 'Before';
+    var labelAfter = isZh ? '术后' : 'After';
+
+    document.querySelectorAll('[data-case-toggle]').forEach(function(card) {
+      var showingAfter = false;
+
+      card.addEventListener('click', function(e) {
+        var afterPic = this.querySelector('.case-preview-card__pic--after');
+        var label = this.querySelector('.case-preview-card__label');
+
+        if (!showingAfter) {
+          afterPic.style.opacity = '1';
+          label.textContent = labelAfter;
+          showingAfter = true;
+          e.preventDefault();
+        } else {
+          afterPic.style.opacity = '0';
+          label.textContent = labelBefore;
+          showingAfter = false;
+        }
+      });
+    });
+  }
+
+  /* Cases Preview: PC hover label toggle */
+  if (window.matchMedia('(hover: hover)').matches) {
+    var isZhPc = document.documentElement.lang === 'zh' || document.documentElement.lang === 'zh-CN' || document.documentElement.lang === 'zh-Hans';
+    var lblBefore = isZhPc ? '术前' : 'Before';
+    var lblAfter = isZhPc ? '术后' : 'After';
+
+    document.querySelectorAll('[data-case-toggle]').forEach(function(card) {
+      var label = card.querySelector('.case-preview-card__label');
+      card.addEventListener('mouseenter', function() {
+        label.textContent = lblAfter;
+      });
+      card.addEventListener('mouseleave', function() {
+        label.textContent = lblBefore;
+      });
+    });
+  }
+
   /* Instagram feed scroll */
   var instagramFeed = document.getElementById('instagram-feed');
   if (instagramFeed) enableDragScroll(instagramFeed);

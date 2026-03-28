@@ -1004,12 +1004,16 @@ body::before {
   color: var(--color-text-muted);
   margin-top: var(--space-sm);
 }
+/* Scroll wrapper with nav buttons */
+.cases-preview__scroll-wrapper {
+  position: relative;
+}
 .cases-preview__scroll {
   display: flex;
-  gap: var(--space-lg);
+  gap: 24px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: var(--space-lg) 0 var(--space-xl);
+  padding: var(--space-lg) clamp(16px, 4vw, 60px) var(--space-xl);
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   cursor: grab;
@@ -1020,8 +1024,56 @@ body::before {
 .cases-preview__scroll::-webkit-scrollbar {
   display: none;
 }
+/* Nav arrows */
+.cases-preview__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold-muted);
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--color-gold);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-base), border-color var(--transition-base);
+}
+.cases-preview__nav:hover {
+  background: rgba(0, 0, 0, 0.85);
+  border-color: var(--color-gold);
+}
+.cases-preview__nav svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.cases-preview__nav--prev {
+  left: 8px;
+}
+.cases-preview__nav--next {
+  right: 8px;
+}
+@media (max-width: 600px) {
+  .cases-preview__nav {
+    display: none;
+  }
+}
+/* Card base */
 .case-preview-card {
-  flex: 0 0 340px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  flex-shrink: 0;
+  width: min(420px, 38vw);
   scroll-snap-align: start;
   background: var(--color-noir-700);
   border-radius: var(--radius-md);
@@ -1034,35 +1086,67 @@ body::before {
   border-color: var(--color-gold-muted);
   transform: translateY(-4px);
 }
+@media (max-width: 1024px) {
+  .case-preview-card {
+    width: min(360px, 60vw);
+  }
+}
+@media (max-width: 600px) {
+  .case-preview-card {
+    width: min(320px, 85vw);
+  }
+}
+/* Card images: Before/After toggle */
 .case-preview-card__images {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: var(--space-xs);
-  padding: var(--space-md);
-}
-.case-preview-card__img {
-  aspect-ratio: 1;
+  position: relative;
   overflow: hidden;
-  border-radius: var(--radius-sm);
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;
 }
-.case-preview-card__img picture {
+.case-preview-card__pic {
   display: block;
   width: 100%;
   height: 100%;
 }
-.case-preview-card__img img,
-.case-preview-card__img .placeholder-img {
+.case-preview-card__pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
-.case-preview-card__arrow {
-  color: var(--color-gold);
-  font-family: var(--font-en-display);
-  font-size: 1.5rem;
-  padding: 0 var(--space-sm);
+.case-preview-card__pic--after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
+/* PC: hover toggle */
+@media (hover: hover) {
+  .case-preview-card:hover .case-preview-card__pic--after {
+    opacity: 1;
+  }
+}
+/* Before/After label */
+.case-preview-card__label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.2s ease;
+}
+/* Card info */
 .case-preview-card__info {
   padding: 0 var(--space-md) var(--space-lg);
 }
@@ -2186,10 +2270,6 @@ body::before {
   .treatment-card__icon {
     width: 60px;
     height: 60px;
-  }
-
-  .case-preview-card {
-    flex: 0 0 280px;
   }
 
   .doctors__grid {
@@ -4796,8 +4876,7 @@ body::before {
 .doctor-profile__photo .placeholder-img,
 .clinic-gallery__item img,
 .clinic-gallery__item .placeholder-img,
-.case-preview-card__img img,
-.case-preview-card__img .placeholder-img {
+.case-preview-card__pic img {
   -webkit-mask-image: linear-gradient(to bottom, transparent, black 4%, black 96%, transparent),
                       linear-gradient(to right, transparent, black 4%, black 96%, transparent);
   -webkit-mask-composite: source-in;
@@ -4807,8 +4886,7 @@ body::before {
 }
 
 /* B. Inset picture frame — position context */
-.menu-hub__category-image,
-.case-preview-card__img {
+.menu-hub__category-image {
   position: relative;
 }
 
@@ -4816,8 +4894,7 @@ body::before {
 .reasons__image::after,
 .menu-hub__category-image::after,
 .doctor-profile__photo::after,
-.clinic-gallery__item::after,
-.case-preview-card__img::after {
+.clinic-gallery__item::after {
   content: '';
   position: absolute;
   inset: 10px;
