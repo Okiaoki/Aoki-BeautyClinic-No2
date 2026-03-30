@@ -179,12 +179,16 @@
     <!-- ── SEC-01: Hero ── -->
     <section class="hero section" id="hero">
       <div class="hero__bg">
-        <picture>
-          <source media="(max-width: 768px)" srcset="../assets/img/hero-bg-sp.webp" type="image/webp">
-          <source media="(max-width: 768px)" srcset="../assets/img/hero-bg-sp.jpg" type="image/jpeg">
-          <source srcset="../assets/img/hero-bg.webp" type="image/webp">
-          <img src="../assets/img/hero-bg.jpg" width="1920" height="1080" fetchpriority="high" decoding="async" alt="" aria-hidden="true">
-        </picture>
+        <video
+          src="../assets/img/hero-bg.mp4"
+          poster="../assets/img/hero-bg.jpg"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        ></video>
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
       <div class="hero__content">

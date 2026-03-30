@@ -607,6 +607,11 @@ body::before {
   object-fit: cover;
   animation: kenBurns 25s ease-in-out infinite alternate;
 }
+.hero__bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .hero__bg .placeholder-img {
   width: 100%;
   height: 100%;
