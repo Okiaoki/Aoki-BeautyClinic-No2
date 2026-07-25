@@ -113,6 +113,11 @@
 
   /* ── Number Counter Animation ── */
   function animateCount(el, target, duration) {
+    if (isNaN(target)) return;
+    if (!duration || duration <= 0) {
+      el.textContent = target.toLocaleString();
+      return;
+    }
     var startTime = null;
     function step(timestamp) {
       if (!startTime) startTime = timestamp;
@@ -159,11 +164,17 @@
   /* ── Hamburger & Drawer ── */
   var burger = document.getElementById('burger');
   var drawer = document.getElementById('mobile-drawer');
+  var _lang = (document.documentElement.lang || 'ja').slice(0, 2);
+  var MENU_LABEL = {
+    open:  { ja: 'メニューを開く', en: 'Open menu',  zh: '打开菜单' },
+    close: { ja: 'メニューを閉じる', en: 'Close menu', zh: '关闭菜单' }
+  };
+  function _menuLabel(k) { return MENU_LABEL[k][_lang] || MENU_LABEL[k].ja; }
 
   function openDrawer() {
     burger.classList.add('is-open');
     burger.setAttribute('aria-expanded', 'true');
-    burger.setAttribute('aria-label', 'メニューを閉じる');
+    burger.setAttribute('aria-label', _menuLabel('close'));
     drawer.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   }
@@ -171,7 +182,7 @@
   function closeDrawer() {
     burger.classList.remove('is-open');
     burger.setAttribute('aria-expanded', 'false');
-    burger.setAttribute('aria-label', 'メニューを開く');
+    burger.setAttribute('aria-label', _menuLabel('open'));
     drawer.classList.remove('is-open');
     document.body.style.overflow = '';
   }
@@ -201,19 +212,34 @@
     });
   }
 
-  /* ── Mobile Fixed CTA (show/hide on scroll) ── */
+  /* ── Fixed CTA (mobile bottom bar / PC 追従サイドCTA) show/hide on scroll ── */
   var mobileCta = document.getElementById('mobile-cta');
-  var heroSection = document.getElementById('hero');
+  var sideCta = document.getElementById('side-cta');
+  /* トップは #hero、下層ページは .page-hero を基準にする */
+  var ctaAnchor = document.getElementById('hero') || document.querySelector('.page-hero');
 
-  if (mobileCta && heroSection) {
-    var ctaObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        /* Show mobile CTA when hero is NOT visible */
-        mobileCta.classList.toggle('is-visible', !entry.isIntersecting);
-      });
-    }, { threshold: 0 });
+  if (mobileCta || sideCta) {
+    if (ctaAnchor) {
+      var ctaObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          /* ヒーローが見えなくなったら追従CTAを表示 */
+          var show = !entry.isIntersecting;
+          if (mobileCta) mobileCta.classList.toggle('is-visible', show);
+          if (sideCta) sideCta.classList.toggle('is-visible', show);
+        });
+      }, { threshold: 0 });
 
-    ctaObserver.observe(heroSection);
+      ctaObserver.observe(ctaAnchor);
+    } else {
+      /* 基準要素が無いページ：一定量スクロールしたら表示 */
+      var onScrollCta = function () {
+        var show = window.pageYOffset > 400;
+        if (mobileCta) mobileCta.classList.toggle('is-visible', show);
+        if (sideCta) sideCta.classList.toggle('is-visible', show);
+      };
+      window.addEventListener('scroll', onScrollCta, { passive: true });
+      onScrollCta();
+    }
   }
 
   /* ── Drag Scroll for horizontal containers ── */

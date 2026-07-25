@@ -15,6 +15,48 @@
 
   if (!tabs.length) return;
 
+  /* ── i18n（表示ラベルのみ言語別。data-type 等の照合キーは日本語のまま） ── */
+  var LANG = (document.documentElement.lang || 'ja').slice(0, 2);
+  var SUB_LABELS = {
+    'すべて': { en: 'All', zh: '全部' },
+    '二重埋没': { en: 'Buried Suture', zh: '埋线双眼皮' },
+    '二重切開': { en: 'Incisional Method', zh: '切开双眼皮' },
+    '目の下たるみ': { en: 'Under-Eye Bags', zh: '眼下松弛' },
+    '眼瞼下垂': { en: 'Ptosis', zh: '上睑下垂' },
+    '隆鼻術': { en: 'Rhinoplasty', zh: '隆鼻' },
+    '小鼻縮小': { en: 'Alar Reduction', zh: '缩鼻翼' },
+    '鼻尖形成': { en: 'Nasal Tip Plasty', zh: '鼻尖成形' },
+    '鼻中隔延長': { en: 'Septal Extension', zh: '鼻中隔延长' },
+    'エラボトックス': { en: 'Jaw Botox', zh: '咬肌肉毒素' },
+    '骨切り': { en: 'Bone Contouring', zh: '削骨' },
+    '糸リフト': { en: 'Thread Lift', zh: '线雕提拉' },
+    '顎プロテーゼ': { en: 'Chin Implant', zh: '下巴假体' },
+    'バッカルファット': { en: 'Buccal Fat Removal', zh: '颊脂垫去除' },
+    'レーザートーニング': { en: 'Laser Toning', zh: '激光调色' },
+    'ピーリング': { en: 'Chemical Peel', zh: '果酸换肤' },
+    'ハイフ': { en: 'HIFU', zh: '超声刀' },
+    'フォトフェイシャル': { en: 'Photofacial', zh: '光子嫩肤' },
+    'ダーマペン': { en: 'Dermapen', zh: '微针' },
+    'ヒアルロン酸': { en: 'Hyaluronic Acid', zh: '玻尿酸' },
+    'ボトックス': { en: 'Botox', zh: '肉毒素' },
+    '全身': { en: 'Full Body', zh: '全身' },
+    '顔': { en: 'Face', zh: '面部' },
+    'VIO': { en: 'VIO', zh: 'VIO' },
+    '豊胸': { en: 'Breast Augmentation', zh: '隆胸' },
+    '脂肪吸引': { en: 'Liposuction', zh: '吸脂' }
+  };
+  function trSub(s) { if (LANG === 'ja') return s; var e = SUB_LABELS[s]; return e && e[LANG] ? e[LANG] : s; }
+  var MODAL_LABELS = {
+    doctor:      { ja: '担当',           en: 'Doctor',               zh: '主诊' },
+    procedure:   { ja: '施術内容',       en: 'Procedure',            zh: '治疗内容' },
+    duration:    { ja: '施術時間',       en: 'Duration',             zh: '治疗时间' },
+    cost:        { ja: '費用',           en: 'Price',                zh: '费用' },
+    risk:        { ja: 'リスク・副作用', en: 'Risks & Side Effects', zh: '风险·副作用' },
+    downtime:    { ja: 'ダウンタイム',   en: 'Downtime',             zh: '恢复期' },
+    doctorLabel: { ja: '担当医',         en: 'Attending Doctor',     zh: '主诊医生' }
+  };
+  function trModal(k) { var e = MODAL_LABELS[k]; return e ? (e[LANG] || e.ja) : k; }
+
   /* ── Sub-filter data ── */
   var subFilters = {
     eye:       ['すべて', '二重埋没', '二重切開', '目の下たるみ', '眼瞼下垂'],
@@ -56,7 +98,7 @@
     items.forEach(function (label) {
       var btn = document.createElement('button');
       btn.className = 'cases-filter__sub-btn' + (label === 'すべて' ? ' is-active' : '');
-      btn.textContent = label;
+      btn.textContent = trSub(label);
       btn.type = 'button';
       btn.addEventListener('click', function () {
         currentSubType = label;
@@ -117,20 +159,20 @@
     if (modalMeta) {
       modalMeta.innerHTML =
         '<span>' + (data.casePatient || '') + '</span>' +
-        '<span>担当: ' + (data.caseDoctor || '') + '</span>';
+        '<span>' + trModal('doctor') + ': ' + (data.caseDoctor || '') + '</span>';
     }
     if (modalTable) {
       modalTable.innerHTML =
-        '<tr><th>施術内容</th><td>' + (data.caseProcedure || '') + '</td></tr>' +
-        '<tr><th>施術時間</th><td>' + (data.caseDuration || '') + '</td></tr>' +
-        '<tr><th>費用</th><td>' + (data.caseCost || '') + '</td></tr>' +
-        '<tr><th>リスク・副作用</th><td>' + (data.caseRisk || '') + '</td></tr>' +
-        '<tr><th>ダウンタイム</th><td>' + (data.caseDowntime || '') + '</td></tr>';
+        '<tr><th>' + trModal('procedure') + '</th><td>' + (data.caseProcedure || '') + '</td></tr>' +
+        '<tr><th>' + trModal('duration') + '</th><td>' + (data.caseDuration || '') + '</td></tr>' +
+        '<tr><th>' + trModal('cost') + '</th><td>' + (data.caseCost || '') + '</td></tr>' +
+        '<tr><th>' + trModal('risk') + '</th><td>' + (data.caseRisk || '') + '</td></tr>' +
+        '<tr><th>' + trModal('downtime') + '</th><td>' + (data.caseDowntime || '') + '</td></tr>';
     }
     if (modalComment) {
       var doctorName = modal.querySelector('.cases-modal__comment-doctor');
       var commentText = modal.querySelector('.cases-modal__comment-text');
-      if (doctorName) doctorName.textContent = '担当医: ' + (data.caseDoctor || '');
+      if (doctorName) doctorName.textContent = trModal('doctorLabel') + ': ' + (data.caseDoctor || '');
       if (commentText) commentText.textContent = data.caseComment || '';
     }
 

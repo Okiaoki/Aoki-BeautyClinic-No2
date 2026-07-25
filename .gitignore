@@ -1,0 +1,8 @@
+# 内部用（公開しない）
+IMAGE_PROMPTS.md
+CASE_IMAGE_PROMPTS.md
+_expansion-plan.md
+_rough/
+_*.ps1
+*.bak
+_translation-spec.md
