@@ -94,7 +94,18 @@
       subContainer.classList.remove('is-visible');
       return;
     }
-    var items = subFilters[category];
+    /* 実際に症例があるサブタイプだけ出す（0件ピルを押させない） */
+    var present = {};
+    cards.forEach(function (card) {
+      if (card.getAttribute('data-category') === category) present[card.getAttribute('data-type')] = true;
+    });
+    var items = subFilters[category].filter(function (label) {
+      return label === 'すべて' || present[label];
+    });
+    if (items.length <= 1) {
+      subContainer.classList.remove('is-visible');
+      return;
+    }
     items.forEach(function (label) {
       var btn = document.createElement('button');
       btn.className = 'cases-filter__sub-btn' + (label === 'すべて' ? ' is-active' : '');
